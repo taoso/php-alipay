@@ -20,13 +20,13 @@ class AlipayServiceProvider extends ServiceProvider {
 	{
         $this->app->bind('alipay.sdk', function () {
             $pay = new SdkPayment;
-            $pay ->setPartner(Config::get('pay.ali.partner_id'))
-                ->setPrivateKey(Config::get('pay.ali.rsa_private_key'))
-                ->setPublicKey(Config::get('pay.ali.ali_rsa_public_key'))
-                ->setSellerId(Config::get('pay.ali.account'))
-                ->setNotifyUrl(Config::get('pay.ali.notify_url'))
-                ->setSubject(Config::get('pay.ali.subject'))
-                ->setBody(Config::get('pay.ali.body'));
+            $pay ->setPartner(\Config::get('pay.ali.partner_id'))
+                ->setPrivateKey(\Config::get('pay.ali.rsa_private_key'))
+                ->setPublicKey(\Config::get('pay.ali.ali_rsa_public_key'))
+                ->setSellerId(\Config::get('pay.ali.account'))
+                ->setNotifyUrl(\Config::get('pay.ali.notify_url'))
+                ->setSubject(\Config::get('pay.ali.subject'))
+                ->setBody(\Config::get('pay.ali.body'));
 
             return $pay;
         });
