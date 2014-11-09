@@ -23,7 +23,8 @@ composer require jlyu/alipay
 
 生成sdk商品信息参数示例：
 
-```
+```php
+<?php
 $alipay = new Jlyu\Alipay\SdkPayment;
 // 设置商家合作id
 $alipay->setPartner('2088xxxx')
@@ -49,7 +50,8 @@ $info = $alipay->getPayInfo();
 
 解析支付宝异步通知：
 
-```
+```php
+<?php
 $ali_pub_key = file_get_contents(__DIR__ . '/alipay_public_key.pem');
 // POST原始数据
 // 通过 file_get_contents('php://stdin') 获取
@@ -73,7 +75,8 @@ $data = $alipay->getNotifyInfo($post_data);
 
 创建`app/config/pay.php`，内容如下：
 
-```
+```php
+<?php
 return [
     'ali' => [
         // 合作标识
