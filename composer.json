@@ -12,8 +12,8 @@
         "illuminate/support": "4.2.*"
     },
     "autoload": {
-        "psr-0": {
-            "Jlyu\\Alipay": "src/"
+        "psr-4": {
+            "Jlyu\\Alipay\\": "src/"
         }
     },
     "minimum-stability": "stable",
