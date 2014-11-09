@@ -1,0 +1,23 @@
+{
+    "name": "jlyu/alipay",
+    "description": "支付宝移动无线产品服务端工具包",
+    "authors": [
+        {
+            "name": "Jalen Lyu",
+            "email": "jalen.lyu@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jlyu\\Alipay": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "~4.3"
+    }
+}
