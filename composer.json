@@ -3,6 +3,7 @@
     "description": "支付宝移动无线产品服务端工具包",
     "type": "library",
     "license": "MIT",
+    "keywords": [ "alipay", "laravel", "sdk" ],
     "authors": [
         {
             "name": "Jalen Lyu",
