@@ -6,7 +6,7 @@ class SdkPaymentTest extends PHPUnit_Framework_TestCase {
         $alipay->setPartner('2088611164564671')
             ->setPrivateKey(file_get_contents(__DIR__ . '/rsa_private_key.pem'))
             ->setPublicKey(file_get_contents(__DIR__ . '/alipay_public_key.pem'))
-            ->setNotifyUrl('http://api.boctor.cn/alipay-confirmation')
+            ->setNotifyUrl('http://api.xxx.cn/alipay-confirmation')
             ->setSubject('别扛着咨询费')
             ->setBody('别扛着咨询费')
             ->setOutTradeNo("123")
@@ -14,6 +14,9 @@ class SdkPaymentTest extends PHPUnit_Framework_TestCase {
             ->setTotalFee('0.01')
             ;
         $info = $alipay->getPayInfo();
+        file_put_contents(
+            __DIR__ . '/order_info.txt',
+            $info);
 
         $this->assertStringEqualsFile(
             __DIR__ . '/order_info.txt',
