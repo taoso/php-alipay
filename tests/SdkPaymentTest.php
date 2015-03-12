@@ -2,7 +2,7 @@
 
 class SdkPaymentTest extends PHPUnit_Framework_TestCase {
     public function testGetPayInfo() {
-        $alipay = new Jlyu\Alipay\SdkPayment;
+        $alipay = new Lv\Alipay\SdkPayment;
         $alipay->setPartner('2088611164564671')
             ->setPrivateKey(file_get_contents(__DIR__ . '/rsa_private_key.pem'))
             ->setPublicKey(file_get_contents(__DIR__ . '/alipay_public_key.pem'))
@@ -28,7 +28,7 @@ class SdkPaymentTest extends PHPUnit_Framework_TestCase {
         $ali_pub_key = file_get_contents(__DIR__ . '/alipay_public_key.pem');
         $post_data = file_get_contents(__DIR__ . '/notify_raw_post.txt');
 
-        $alipay = new Jlyu\Alipay\SdkPayment;
+        $alipay = new Lv\Alipay\SdkPayment;
         $alipay->setPublicKey($ali_pub_key);
         $data = $alipay->getNotifyInfo($post_data);
 

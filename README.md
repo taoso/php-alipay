@@ -18,14 +18,14 @@
 ### 安装
 
 ```
-composer require jlyu/alipay
+composer require lvht/alipay
 ```
 
 生成sdk商品信息参数示例：
 
 ```php
 <?php
-$alipay = new Jlyu\Alipay\SdkPayment;
+$alipay = new Lv\Alipay\SdkPayment;
 // 设置商家合作id
 $alipay->setPartner('2088xxxx')
     // 设置商家私钥
@@ -58,7 +58,7 @@ $ali_pub_key = file_get_contents(__DIR__ . '/alipay_public_key.pem');
 // 此处为方便测试，我们将获取的内容存入文件
 $post_data = file_get_contents(__DIR__ . '/notify_raw_post.txt');
 
-$alipay = new Jlyu\Alipay\SdkPayment;
+$alipay = new Lv\Alipay\SdkPayment;
 $alipay->setPublicKey($ali_pub_key);
 $data = $alipay->getNotifyInfo($post_data);
 ```
@@ -69,7 +69,7 @@ $data = $alipay->getNotifyInfo($post_data);
 
 ```
 'providers' => array(
-    'Jlyu\Alipay\AlipayServiceProvider',
+    'Lv\Alipay\AlipayServiceProvider',
 )
 ```
 

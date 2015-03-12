@@ -1,5 +1,4 @@
-<?php
-namespace Jlyu\Alipay;
+<?php namespace Lv\Alipay;
 
 class SdkPayment {
     private $service = 'mobile.securitypay.pay';
